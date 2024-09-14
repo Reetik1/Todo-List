@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Todo Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Advanced Todo App</h1>
+            <div class="task-counter">
+                <span id="total-tasks">0</span> tasks / 
+                <span id="completed-tasks">0</span> completed
+            </div>
+        </header>
+        
+        <main>
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="Add a new task...">
+                <select id="category-select">
+                    <option value="">Select Category</option>
+                </select>
+                <input type="date" id="due-date">
+                <input type="time" id="due-time">
+                <button type="submit">Add Task</button>
+            </form>
+
+            <div class="filters">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Search todos...">
+                <button id="sort-priority">Sort by Priority</button>
+            </div>
+
+            <ul id="todo-list"></ul>
+        </main>
+
+        <footer>
+            <div id="clock-display"></div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
